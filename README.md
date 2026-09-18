@@ -6,6 +6,8 @@ The program is intended to help women entrepreneurs in Haiti and other resource-
 
 > **Current status:** Planning and feasibility research. No production application, cloud environment, or participant-data system has been implemented from this repository.
 
+See [Product Terminology](docs/product-terminology.md) for the approved names and definitions used across planning, specifications, and component repositories.
+
 ## Nonprofit Vision
 
 Reinvest-to-Grow™ will support women entrepreneurs through a practical enterprise-development approach. It combines margin improvement, appropriate growth capital, coaching, training, productive reinvestment, and evidence-based learning. The Enterprise Supply Hub is expected to be an important operating environment for collective purchasing, inventory access, entrepreneur support, and program learning.

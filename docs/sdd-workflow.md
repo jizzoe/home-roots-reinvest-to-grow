@@ -2,13 +2,13 @@
 
 ## Purpose And Status
 
-This document defines the local Specification-Driven Development (SDD) policy for the Invest in Growth planning repository. It supplements the generated OpenSpec lifecycle integrations with repository-owned product context, approvals, validation, and recovery rules.
+This document defines the local Specification-Driven Development (SDD) policy for the Reinvest-to-Grow™ planning repository. It supplements the generated OpenSpec lifecycle integrations with repository-owned product context, approvals, validation, and recovery rules.
 
 OpenSpec 1.8.0 was used for the initial bootstrap on 2026-08-13. Upgrades must be deliberate: review generated changes, rerun this validation contract, and record any workflow or schema impact. See [`AGENTS.md`](../AGENTS.md) before starting lifecycle work and [`sdd-bootstrap-evidence.md`](sdd-bootstrap-evidence.md) for activation evidence.
 
 ## Approved Bootstrap Decisions
 
-- **Product identity:** Invest in Growth technology planning supporting Home Roots Foundation's Reinvest-to-Grow methodology and the prospective Enterprise Growth Platform.
+- **Product identity:** Reinvest-to-Grow™ technology planning supporting Home Roots Foundation's Reinvest-to-Grow™ Methodology and the prospective Enterprise Growth Platform.
 - **Repository ownership:** this repository is the central planning, architecture, and cross-repository specification boundary. Application and infrastructure implementations belong in component repositories.
 - **Assistants:** Claude and Codex.
 - **Lifecycle:** Explore, Propose, Apply, Verify, Sync, and Archive.
@@ -37,6 +37,7 @@ Do not change user-level workflow configuration, install global skills, authenti
 | `.claude/commands/opsx/` | Generated Claude lifecycle commands; regenerate, do not hand-edit. |
 | `AGENTS.md` | Repository-owned agent policy and safety boundary. |
 | `docs/sdd-workflow.md` | Repository-owned lifecycle, validation, evidence, and recovery contract. |
+| `docs/product-terminology.md` | Repository-owned terminology policy for product, program, component, and technical names. |
 | `ai-planning/research/` | Research and feasibility evidence. |
 | `ai-planning/design-briefs/` | Accepted or reviewable design context; status must be read from each document. |
 | `ai-planning/ai-planning/implementation-plans/` | Existing delivery planning; plans are not implementation authorization. |

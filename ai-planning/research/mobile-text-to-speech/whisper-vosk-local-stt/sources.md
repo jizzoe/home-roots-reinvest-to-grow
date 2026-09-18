@@ -6,14 +6,14 @@ Access date for all sources: 2026-08-18.
 
 ### M1.1 Offline Multilingual Speech Design Brief
 
-- Publisher: Home Roots / Invest in Growth planning repository
+- Publisher: Home Roots / Reinvest-to-Grow™ planning repository
 - URL or path: `ai-planning/design-briefs/m1.1-offline-multilingual-speech.md`
 - Source type: primary project source
 - Relevance: Confirms the owner decision to evaluate Whisper first, compare Vosk, retain a replaceable `SpeechToTextAdapter`, and test offline English, French, and Haitian Creole on low-cost Android and iPhone hardware.
 
 ### Existing Speech-to-Text and Text-to-Speech Research
 
-- Publisher: Home Roots / Invest in Growth planning repository
+- Publisher: Home Roots / Reinvest-to-Grow™ planning repository
 - URL or path: `ai-planning/research/tech-research/speech-to-text-and-text-to-speech/speech-to-text-and-text-to-speech-findings.md`
 - Source type: primary project source
 - Relevance: Records prior project evidence and constraints, including local/offline requirements, M1 fixture scope, and the need for physical-device benchmarks.

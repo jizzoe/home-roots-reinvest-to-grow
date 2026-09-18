@@ -3,7 +3,7 @@
 ## Status and Purpose
 
 - **Research date:** June 2026
-- **Decision scope:** Mobile bookkeeping, voice and document entry, microloan administration, and nonprofit outcome reporting
+- **Decision scope:** Mobile enterprise tracking, voice and document entry, financing administration, and nonprofit outcome reporting
 - **Architecture baseline:** AWS-native custom platform described in `ARCHITECTURE.md`
 - **Purpose:** Determine whether the nonprofit should build, buy, customize, or integrate existing products
 
@@ -15,10 +15,10 @@ No single mature SaaS product identified during this research meets the complete
 - Voice-operated and multilingual interaction
 - Receipt and document scanning
 - Offline use in low-connectivity environments
-- Nonprofit microloan administration
-- Recipient business-performance reporting
+- Nonprofit financing administration
+- Entrepreneur and enterprise performance reporting
 - Grant and impact reporting
-- A unified nonprofit back-office view
+- A unified HRF Administrative Portal view
 
 However, substantial portions of the system are already available as SaaS or open-source products. Building the entire platform from scratch would duplicate difficult, regulated, and error-prone loan-servicing and accounting capabilities.
 
@@ -27,8 +27,8 @@ However, substantial portions of the system are already available as SaaS or ope
 Use a **hybrid buy-and-build strategy**:
 
 1. **Buy or adopt an existing loan-management core** for loan schedules, balances, repayments, portfolio-at-risk reporting, and lender accounting.
-2. **Pilot existing bookkeeping products** with actual recipients before building custom bookkeeping.
-3. **Build only the differentiated recipient experience and integration layer** if existing bookkeeping products fail the field pilot.
+2. **Pilot existing bookkeeping products** with entrepreneurs before building custom bookkeeping.
+3. **Build only the differentiated Enterprise Growth App experience and integration layer** if existing bookkeeping products fail the field pilot.
 4. **Use a configurable reporting/data-collection product initially** for grant and outcome reporting rather than building a complete impact-management suite.
 
 The first products to evaluate are:
@@ -40,11 +40,11 @@ The first products to evaluate are:
 - **ActivityInfo** for offline-capable outcome collection and program reporting
 - **Salesforce Nonprofit Cloud** only if the nonprofit also needs a broad organizational CRM and can support the implementation burden
 
-The nonprofit should not begin by building a custom loan-management system. It should run structured product trials before deciding whether custom recipient bookkeeping is justified.
+The nonprofit should not begin by building a custom loan-management system. It should run structured product trials before deciding whether custom entrepreneur bookkeeping is justified.
 
 ## 1. Decision Criteria
 
-### 1.1 Recipient Experience
+### 1.1 Entrepreneur Experience
 
 - Simple enough for users without bookkeeping training
 - Mobile-first
@@ -90,7 +90,7 @@ The requirements span four distinct software categories.
 | Microfinance/core lending | Loan products, schedules, repayments, portfolio reporting, accounting | Weak recipient bookkeeping and user experience |
 | Impact/program management | Outcome definitions, assessments, field data, grant reporting | Does not manage recipient books or loan balances |
 
-The product concept is differentiated because it connects these categories around the recipient's daily business activity. That does not mean every category should be custom-built.
+The product concept is differentiated because it connects these categories around the entrepreneur's daily business activity. That does not mean every category should be custom-built.
 
 ## 3. Candidate Products
 
@@ -109,7 +109,7 @@ The product concept is differentiated because it connects these categories aroun
 - Current App Store listing says users can speak in any language.
 - Pro pricing is currently listed at $9.99/month or $89.99/year; Team is $24.99/month or $199.99/year.
 
-**Potential fit:** This is the closest identified product to the proposed recipient experience.
+**Potential fit:** This is the closest identified product to the proposed entrepreneur experience.
 
 **Important concerns:**
 
@@ -239,7 +239,7 @@ The product concept is differentiated because it connects these categories aroun
 - Accounting, sales, inventory, and broad business-management modules
 - Extensible and can be self-hosted or purchased as SaaS
 
-**Potential fit:** Attractive when recipients need broader business-management capabilities or the nonprofit wants one highly configurable platform.
+**Potential fit:** Attractive when entrepreneurs need broader business-management capabilities or the nonprofit wants one highly configurable platform.
 
 **Gaps:**
 
@@ -467,7 +467,7 @@ Legend:
 - **Weak:** Not a primary capability
 - **Unknown:** Requires vendor verification
 
-| Product | Simple Recipient UX | Voice | Multilingual | Receipt/OCR | Offline | Business Books | Loan Core | Impact Reporting | APIs/Extensibility |
+| Product | Simple Entrepreneur UX | Voice | Multilingual | Receipt/OCR | Offline | Business Books | Loan Core | Impact Reporting | APIs/Extensibility |
 |---|---|---|---|---|---|---|---|---|---|
 | Talkbooks | Strong | Strong | Partial | Unknown | Unknown | Strong | Weak | Weak | Unknown |
 | Kweezi | Strong | Partial | Unknown | Strong | Weak | Partial | Weak | Weak | Unknown |
@@ -610,16 +610,16 @@ Use:
 
 ```mermaid
 flowchart TD
-    Recipient["Recipient Mobile Experience<br/>Buy first; build only if justified"]
-    Staff["Nonprofit Back Office"]
+    EnterpriseApp["Enterprise Growth App<br/>Buy first; build only if justified"]
+    Staff["HRF Administrative Portal"]
     Integration["Custom Integration and Reporting Layer"]
     Books["Bookkeeping Product<br/>or later custom ledger"]
     Loans["Loan System of Record<br/>Loandisk or Mifos/Fineract"]
     Outcomes["Outcome Collection<br/>ActivityInfo initially"]
     Warehouse["Consolidated Reporting Store"]
 
-    Recipient --> Books
-    Recipient --> Integration
+    EnterpriseApp --> Books
+    EnterpriseApp --> Integration
     Staff --> Integration
     Integration --> Loans
     Integration --> Outcomes
@@ -631,7 +631,7 @@ flowchart TD
 
 The custom integration layer should own:
 
-- Cross-system business and recipient identifiers
+- Cross-system business and entrepreneur identifiers
 - Authentication and authorization integration
 - Data synchronization and audit logs
 - Consolidated portfolio and outcome reporting
@@ -710,7 +710,7 @@ Measure:
 
 ### Phase 4: Build Decision
 
-Build a custom recipient app only if the pilot demonstrates that existing products fail on important, frequent workflows such as:
+Build a custom Enterprise Growth App only if the pilot demonstrates that existing products fail on important, frequent workflows such as:
 
 - Offline entry
 - Target-language speech
@@ -721,7 +721,7 @@ Build a custom recipient app only if the pilot demonstrates that existing produc
 
 ## 8. Decision Matrix
 
-| Option | Time to Pilot | Initial Cash Cost | Long-Term Control | Recipient UX Fit | Loan Reliability | Volunteer Operability | Overall |
+| Option | Time to Pilot | Initial Cash Cost | Long-Term Control | Entrepreneur UX Fit | Loan Reliability | Volunteer Operability | Overall |
 |---|---|---|---|---|---|---|---|
 | Buy separate SaaS products | Excellent | Low | Low | Partial | Strong | Strong/Partial | Good for discovery |
 | Customize Mifos/Fineract | Moderate | Medium | Strong | Partial until customized | Strong | Weak/Partial | Good long-term core option |
@@ -732,7 +732,7 @@ Build a custom recipient app only if the pilot demonstrates that existing produc
 
 ### Lowest-Risk Pilot
 
-- **Recipient bookkeeping:** Pilot Talkbooks and one receipt-centric alternative such as SparkReceipt or Finovo
+- **Entrepreneur bookkeeping:** Pilot Talkbooks and one receipt-centric alternative such as SparkReceipt or Finovo
 - **Loan management:** Loandisk
 - **Outcome collection:** ActivityInfo
 - **Cross-system reporting:** Initially spreadsheets or a small custom reporting database
@@ -741,7 +741,7 @@ This combination can validate the program without committing to a large custom b
 
 ### Ownership-Oriented Pilot
 
-- **Recipient bookkeeping:** Custom proof-of-concept experience or selected SaaS
+- **Entrepreneur bookkeeping:** Custom proof-of-concept experience or selected SaaS
 - **Loan management:** Mifos X / Apache Fineract
 - **Outcome collection:** ActivityInfo
 - **Integration/reporting:** AWS-hosted custom layer
@@ -758,11 +758,11 @@ Do not treat the decision as simply "build versus buy." Treat it as a sequence:
 
 For the first pilot, adopt Loandisk or another qualified microfinance SaaS as the loan system of record and ActivityInfo as the outcome-data tool. Test Talkbooks and at least one conventional bookkeeping product with real recipients.
 
-After the pilot, build a custom mobile recipient experience only if the evidence shows that voice, offline operation, language support, simplicity, and consolidated nonprofit reporting create enough value to justify permanent ownership of custom software.
+After the pilot, build a custom Enterprise Growth App only if the evidence shows that voice, offline operation, language support, simplicity, and consolidated nonprofit reporting create enough value to justify permanent ownership of custom software.
 
 ## 11. Sources and Product Links
 
-### Bookkeeping and Recipient Experience
+### Bookkeeping and Entrepreneur Experience
 
 - [Talkbooks](https://talkbooks.app/)
 - [Talkbooks pricing](https://talkbooks.app/pricing/)

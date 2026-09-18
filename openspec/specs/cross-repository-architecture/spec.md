@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Defines the accepted cross-repository planning architecture for Invest in Growth, including repository boundaries, ownership, creation triggers, OpenSpec responsibilities, durable linkage, deferred Store use, and the special M1.2 live-sync proof path.
+Defines the accepted cross-repository planning architecture for Reinvest-to-Grow™ technology planning, including repository boundaries, ownership, creation triggers, OpenSpec responsibilities, durable linkage, deferred Store use, and the special M1.2 live-sync proof path.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ Defines the accepted cross-repository planning architecture for Invest in Growth
 The planning repository SHALL own product-wide planning context, design briefs, architecture decisions, accepted cross-repository specifications, central OpenSpec change packages, coordination evidence, and system-acceptance evidence. It SHALL NOT own mobile, backend, staff-web, worker, or infrastructure implementation code.
 
 #### Scenario: Product-level proposal is created
-- **WHEN** a proposal defines product positioning, cross-component behavior, repository coordination, or system acceptance for Invest in Growth
+- **WHEN** a proposal defines product positioning, cross-component behavior, repository coordination, or system acceptance for Reinvest-to-Grow™ technology planning
 - **THEN** it is created in the planning repository unless a later approved architecture change assigns a different central planning boundary
 
 #### Scenario: Implementation code is proposed in the planning repository
@@ -18,7 +18,7 @@ The planning repository SHALL own product-wide planning context, design briefs, 
 - **THEN** review blocks the proposal as outside the planning repository boundary
 
 ### Requirement: Component repository responsibilities are distinct
-The architecture SHALL define separate component repository responsibilities for mobile, backend, infrastructure, staff web, and deployed worker work. Each component repository SHALL own its implementation code, repository-local OpenSpec changes, tests, builds, deployment definitions, migrations or configuration as applicable, validation evidence, and archive evidence.
+The architecture SHALL define separate component repository responsibilities for the Enterprise Growth App, backend, infrastructure, HRF Administrative Portal, and deployed worker work. Each component repository SHALL own its implementation code, repository-local OpenSpec changes, tests, builds, deployment definitions, migrations or configuration as applicable, validation evidence, and archive evidence.
 
 #### Scenario: Mobile slice is proposed
 - **WHEN** an approved mobile slice is ready to apply
@@ -43,8 +43,8 @@ No component repository SHALL be created merely to reserve a future boundary. A 
 - **WHEN** an M1.2 REST API, Terraform/AWS, or deployment proof slice is approved for Apply
 - **THEN** backend and infrastructure repositories may be created only after repository locations, ownership, scopes, external-resource gates, and validation plans are explicitly approved
 
-#### Scenario: Future staff web or worker work is ready
-- **WHEN** M10 staff-web work or an independently deployed worker boundary is approved for Apply
+#### Scenario: Future administrative-portal or worker work is ready
+- **WHEN** M10 HRF Administrative Portal work (the staff-web component) or an independently deployed worker boundary is approved for Apply
 - **THEN** the relevant component repository may be created only after its repository-specific scope and validation plan are approved
 
 ### Requirement: Unnecessary repositories are prohibited initially
