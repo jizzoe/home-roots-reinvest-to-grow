@@ -7,7 +7,7 @@ Implementation authorization: M0 is a planning foundation only. Its completion d
 
 ## Decision Summary
 
-Invest in Growth needs one central planning repository and separate component repositories when a component is ready to be implemented. The existing repository, `home-roots-reinvest-in-growth`, is the central planning root. It owns product context, architecture, cross-repository specifications, and system-level evidence; it does not own application or infrastructure implementation.
+Invest in Growth needs one central planning repository and separate component repositories when a component is ready to be implemented. The existing repository, `home-roots-reinvest-to-grow`, is the central planning root. It owns product context, architecture, cross-repository specifications, and system-level evidence; it does not own application or infrastructure implementation.
 
 The first required implementation repository is an Expo React Native mobile repository for the M1 prototype. Backend and infrastructure repositories may be needed earlier than the full M2/M3 foundations if the approved M1.2 live-sync proof proceeds; otherwise they remain deferred until their milestone work begins. Staff-web and worker repositories are needed later, at the milestones where their work begins. Do not create empty repositories merely to reserve a future boundary.
 
@@ -59,7 +59,7 @@ The 2026-08-08 multi-repository plan is a draft and contains an earlier end-to-e
 
 | Repository / boundary | Responsibility | Creation trigger | Status now |
 | --- | --- | --- | --- |
-| `home-roots-reinvest-in-growth` (existing planning root) | Product planning, research, design briefs, architecture decisions, accepted cross-repository behavior, central change packages, coordination and system-acceptance evidence | Already exists | Active; the authoritative product-planning root |
+| `home-roots-reinvest-to-grow` (existing planning root) | Product planning, research, design briefs, architecture decisions, accepted cross-repository behavior, central change packages, coordination and system-acceptance evidence | Already exists | Active; the authoritative product-planning root |
 | Mobile application repository | Expo React Native and TypeScript source, mobile-local OpenSpec changes, SQLite/local-file behavior, device tests, build configuration | Before M1 manual-offline slice is **applied** | Intended base path designated by the owner: `/Users/joerice/git/joericearchitect/hrf-reinvest-in-growth`; not present when M0 closure was verified |
 | Backend service repository | Spring Boot modular monolith, published OpenAPI, migrations, service tests, container build, backend-local OpenSpec changes | Before a backend, sync, or M1.2 REST API proof slice is applied | Deferred unless M1.2 is approved |
 | Infrastructure repository | Terraform, environment definitions, deployment permissions/workflows, infrastructure verification, infrastructure-local OpenSpec changes | Before M2 infrastructure work or an approved M1.2 Terraform/AWS development proof is applied | Deferred unless M1.2 is approved |
