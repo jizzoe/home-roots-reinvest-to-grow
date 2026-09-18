@@ -1,9 +1,13 @@
 schema: spec-driven
 
 context: |
-  Product: Invest in Growth technology planning for Home Roots Foundation's
-  Reinvest-to-Grow enterprise-development methodology and eventual Enterprise
-  Growth Platform.
+  Product: Reinvest-to-Grow™ technology planning for Home Roots Foundation's
+  Reinvest-to-Grow™ Methodology and eventual Enterprise Growth Platform.
+
+  Canonical terminology and naming policy lives in
+  docs/product-terminology.md. Use it when creating or updating product-facing
+  names, component names, repository references, and cross-repository
+  specifications.
 
   Repository boundary: this repository owns public product planning,
   architecture, research, design briefs, cross-repository specifications, and
@@ -18,7 +22,8 @@ context: |
   architecture source material lives under ai-planning/research/,
   ai-planning/design-briefs/, and
   ai-planning/ai-planning/implementation-plans/. Repository governance lives in
-  AGENTS.md and docs/sdd-workflow.md.
+  AGENTS.md and docs/sdd-workflow.md. Product terminology lives in
+  docs/product-terminology.md.
 
   Source of truth: accepted behavior lives in openspec/specs/. Proposed behavior
   lives in openspec/changes/ until verified, synchronized, and archived. Existing

@@ -1,23 +1,23 @@
-# Mobile Bookkeeping Project Summary
+# Reinvest-to-Grow™ Enterprise Growth Platform Summary
 
 ## Project Goal
 
-Build a mobile-first bookkeeping and reporting platform for a nonprofit that provides microloans to disadvantaged small businesses, especially in underdeveloped countries.
+Build a mobile-first enterprise growth platform that helps Home Roots Foundation deliver Reinvest-to-Grow™ to entrepreneurs in resource-constrained settings.
 
 The project has two connected goals:
 
-1. Help small-business owners keep useful financial records without requiring formal bookkeeping or accounting knowledge.
-2. Help the nonprofit demonstrate business impact, loan sustainability, and program outcomes to grant funders.
+1. Help entrepreneurs understand and improve enterprise performance, keep useful financial records, and reinvest productively without requiring formal bookkeeping or accounting knowledge.
+2. Help Home Roots Foundation deliver the model consistently and demonstrate enterprise, financing, and program outcomes to grant funders.
 
-The product should make daily financial tracking simple through a traditional mobile UI, speech input, document scanning, multilingual interaction, AI assistance, and plain-language reports.
+The product should make daily enterprise tracking and support simple through a traditional mobile UI, speech input, document scanning, multilingual interaction, AI assistance, and plain-language reports.
 
 This project will be built as a custom application. The decision is intentionally not only economic: the custom build supports a real nonprofit mission, creates a useful service for people who need it, and gives the developer a serious full-stack product to build while keeping skills sharp after a layoff.
 
 ## Product Requirements
 
-## Recipient Business App
+## Enterprise Growth App
 
-The recipient-facing product should be simple enough for business owners who do not have bookkeeping training.
+The entrepreneur-facing product should be simple enough for business owners who do not have bookkeeping training.
 
 Core capabilities:
 
@@ -31,7 +31,7 @@ Core capabilities:
 - AI assistance for organizing inputs, classifying transactions, extracting receipt data, and suggesting next steps
 - Simple reports that explain business performance clearly
 
-Example recipient workflows:
+Example entrepreneur workflows:
 
 - Record a cash sale
 - Record an expense from speech
@@ -41,17 +41,17 @@ Example recipient workflows:
 - See current loan balance and upcoming repayment
 - Review recent transactions while offline
 
-## Nonprofit Back-Office App
+## HRF Administrative Portal
 
-The nonprofit needs an administrative system for managing recipients, loans, repayment status, documents, and outcomes.
+The nonprofit needs an administrative system for managing entrepreneurs, enterprises, financing, repayment status where applicable, documents, and outcomes.
 
 Core capabilities:
 
 - Manage businesses, owners, staff, and roles
-- Track microloan applications, disbursements, repayment schedules, partial payments, late payments, and balances
+- Track financing applications, disbursements, repayment schedules, partial payments, late payments, and balances where applicable
 - View portfolio health across businesses
 - Track repayment rates, delinquency, and portfolio-at-risk
-- Store recipient documents and notes
+- Store entrepreneur documents and notes
 - Review business activity and financial reports
 - Collect grant and impact metrics
 - Export defensible reports for funders
@@ -91,13 +91,13 @@ Outcome metrics should be stored as dated observations with source and collectio
 
 ## Main Architecture Decision
 
-The main architecture direction is a custom AWS-native platform with a modular monolith backend, a mobile recipient app, a web-based nonprofit back office, and carefully controlled AI/document-processing workers.
+The main architecture direction is a custom AWS-native platform with a modular monolith backend, an Enterprise Growth App, the HRF Administrative Portal, and carefully controlled AI/document-processing workers.
 
 Start with a modular monolith instead of microservices. The product workflows will change significantly during early development and field testing, and a modular monolith keeps deployment, testing, data consistency, and operations simpler.
 
 ## Proposed Starting Architecture
 
-![Microlending app architecture](architecture/microlending-ngapp-architecture.png)
+![Enterprise Growth Platform architecture](architecture/enterprise-growth-platform-architecture.png)
 
 ## Recommended Technology Stack
 
@@ -105,7 +105,7 @@ Start with a modular monolith instead of microservices. The product workflows wi
 |---|---|
 | Mobile app | React Native, Expo, TypeScript |
 | Mobile local storage | SQLite with offline synchronization |
-| Back-office web app | React, TypeScript, Vite, Material UI |
+| HRF Administrative Portal | React, TypeScript, Vite, Material UI |
 | Backend | Java 21+, Spring Boot |
 | AI/document workers | Python workers or Lambda handlers |
 | Database | Amazon RDS PostgreSQL or Aurora PostgreSQL |
@@ -130,7 +130,7 @@ Keep these as separate modules inside the initial Spring Boot backend:
 - Businesses and owner profiles
 - Financial ledger
 - Sales, expenses, inventory, and cash movements
-- Loans, disbursements, and repayments
+- Financing products, disbursements, and repayments
 - Documents and extraction jobs
 - AI suggestions and approvals
 - Outcome metrics
@@ -206,7 +206,7 @@ AI outputs should match versioned JSON schemas. Store the original input, extrac
 
 The mobile app should assume unreliable connectivity.
 
-The recipient app should allow users to:
+The Enterprise Growth App should allow users to:
 
 - Record sales and expenses offline
 - Photograph receipts offline
@@ -243,7 +243,7 @@ Minimum baseline:
 1. Build a narrow pilot around sales, expenses, receipt capture, and simple profit reporting.
 2. Add offline mobile synchronization.
 3. Add speech-based transaction entry for one or two target languages.
-4. Add loan tracking and nonprofit back-office views.
+4. Add financing tracking and HRF Administrative Portal views.
 5. Add defensible outcome metrics.
 6. Add broader document types, languages, and AI automation after observing real usage.
 
@@ -254,7 +254,7 @@ The largest product risk is not the backend architecture. It is whether speech, 
 The first MVP should be deliberately narrow:
 
 - One nonprofit organization
-- A small number of recipient businesses
+- A small number of entrepreneur-led businesses
 - One currency
 - One or two languages
 - Manual user provisioning
@@ -265,8 +265,8 @@ The first MVP should be deliberately narrow:
 - AI-assisted transaction proposal
 - User confirmation before posting
 - Simple profit report
-- Basic loan balance and repayment schedule
-- Staff back-office view of businesses and transactions
+- Basic financing balance and repayment schedule where applicable
+- HRF Administrative Portal view of businesses and transactions
 
 This creates enough real product surface to test the concept without trying to build a complete accounting, lending, and impact-management suite in the first pass.
 
@@ -276,14 +276,14 @@ This creates enough real product surface to test the concept without trying to b
 
 The build-vs-buy analysis found that no single mature SaaS product satisfies the full product vision:
 
-- Extremely simple recipient bookkeeping
+- Extremely simple entrepreneur bookkeeping
 - Voice-operated and multilingual interaction
 - Receipt and document scanning
 - Offline use in low-connectivity environments
-- Nonprofit microloan administration
-- Recipient business-performance reporting
+- Nonprofit financing administration
+- Entrepreneur and enterprise performance reporting
 - Grant and impact reporting
-- Unified nonprofit back-office workflows
+- Unified HRF administrative workflows
 
 Existing products cover portions of the requirement, especially loan management, receipt capture, accounting, and outcome reporting. The alternative path would be a hybrid buy-and-build approach.
 
@@ -295,9 +295,9 @@ The hybrid option would use:
 - An outcome/reporting product for grant metrics
 - A bookkeeping product during discovery
 - A custom integration and reporting layer
-- A custom recipient app only if existing bookkeeping tools fail in field testing
+- A custom Enterprise Growth App only if existing bookkeeping tools fail in field testing
 
-This is lower risk operationally, but it gives less control over the recipient experience, offline behavior, language support, data model, and long-term product direction.
+This is lower risk operationally, but it gives less control over the entrepreneur experience, offline behavior, language support, data model, and long-term product direction.
 
 ## Candidate Products
 
@@ -339,7 +339,7 @@ Mifos X / Apache Fineract is the leading open-source alternative for a configura
 
 Talkbooks is the closest identified product to the desired voice-first bookkeeping experience. It may be especially relevant if the first target market aligns with its current regional focus.
 
-SparkReceipt, Finovo, and Zoho Books are useful bookkeeping and receipt-capture comparison points, but they may not satisfy the desired voice-first, offline, low-literacy recipient experience.
+SparkReceipt, Finovo, and Zoho Books are useful bookkeeping and receipt-capture comparison points, but they may not satisfy the desired voice-first, offline, low-literacy entrepreneur experience.
 
 ActivityInfo is a strong initial candidate for offline-capable outcome collection and program reporting.
 
@@ -347,16 +347,16 @@ ActivityInfo is a strong initial candidate for offline-capable outcome collectio
 
 ```mermaid
 flowchart TD
-    Recipient["Recipient Mobile Experience<br/>Buy first; build only if justified"]
-    Staff["Nonprofit Back Office"]
+    EnterpriseApp["Enterprise Growth App<br/>Buy first; build only if justified"]
+    Staff["HRF Administrative Portal"]
     Integration["Custom Integration and Reporting Layer"]
     Books["Bookkeeping Product<br/>or later custom ledger"]
     Loans["Loan System of Record<br/>Loandisk or Mifos/Fineract"]
     Outcomes["Outcome Collection<br/>ActivityInfo initially"]
     Warehouse["Consolidated Reporting Store"]
 
-    Recipient --> Books
-    Recipient --> Integration
+    EnterpriseApp --> Books
+    EnterpriseApp --> Integration
     Staff --> Integration
     Integration --> Loans
     Integration --> Outcomes
@@ -368,7 +368,7 @@ flowchart TD
 
 The custom integration layer would own:
 
-- Cross-system business and recipient identifiers
+- Cross-system business and entrepreneur identifiers
 - Authentication and authorization integration
 - Data synchronization and audit logs
 - Consolidated portfolio and outcome reporting
@@ -379,9 +379,9 @@ The custom integration layer would own:
 
 The hybrid path is sensible if the primary goal is minimizing operational risk and reaching a pilot quickly. For this project, the custom build is also valuable because:
 
-- The recipient experience is the most mission-specific part of the product.
+- The entrepreneur experience is the most mission-specific part of the product.
 - Offline, speech-first, multilingual bookkeeping may require deep UX control.
-- A unified product can avoid forcing fragile recipients and nonprofit staff across fragmented systems.
+- A unified product can avoid forcing entrepreneurs and nonprofit staff across fragmented systems.
 - The work creates a serious, modern engineering project across mobile, backend, cloud, AI, security, and reporting.
 - The nonprofit mission makes the effort worthwhile even before there is a commercial justification.
 

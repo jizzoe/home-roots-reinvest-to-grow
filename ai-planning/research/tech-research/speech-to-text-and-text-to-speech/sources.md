@@ -1,7 +1,7 @@
 # Sources for speech-to-text-and-text-to-speech
 
 ## Prototype speech proposal confirmation specification
-- Publisher: Invest in Growth planning repository
+- Publisher: Reinvest-to-Grow™ planning repository
 - URL or path: openspec/changes/prototype-speech-proposal-confirmation/specs/prototype-speech-proposal-confirmation/spec.md
 - Access date: 2026-08-18
 - Source type: primary
@@ -10,7 +10,7 @@
 - Claim domain: technical
 
 ## Prototype speech proposal confirmation design
-- Publisher: Invest in Growth planning repository
+- Publisher: Reinvest-to-Grow™ planning repository
 - URL or path: openspec/changes/prototype-speech-proposal-confirmation/design.md
 - Access date: 2026-08-18
 - Source type: primary
@@ -19,7 +19,7 @@
 - Claim domain: technical
 
 ## Phase 06 speech, multilingual UX, and AI proposal workflow
-- Publisher: Invest in Growth planning repository
+- Publisher: Reinvest-to-Grow™ planning repository
 - URL or path: ai-planning/research/tech-research/phase-06-speech-multilingual-ai-proposal-workflow.md
 - Access date: 2026-08-18
 - Source type: primary
@@ -28,7 +28,7 @@
 - Claim domain: technical
 
 ## V1 product guardrails specification
-- Publisher: Invest in Growth planning repository
+- Publisher: Reinvest-to-Grow™ planning repository
 - URL or path: openspec/specs/v1-product-guardrails/spec.md
 - Access date: 2026-08-18
 - Source type: primary
@@ -37,7 +37,7 @@
 - Claim domain: policy
 
 ## M1 later-phase deferred work
-- Publisher: Invest in Growth planning repository
+- Publisher: Reinvest-to-Grow™ planning repository
 - URL or path: ai-planning/design-briefs/m1-later-phase-deferred-work.md
 - Access date: 2026-08-18
 - Source type: primary
@@ -46,7 +46,7 @@
 - Claim domain: policy
 
 ## Nonprofit cost programs running list
-- Publisher: Invest in Growth planning repository
+- Publisher: Reinvest-to-Grow™ planning repository
 - URL or path: ai-planning/research/tech-research/nonprofit-cost-programs-running-list.md
 - Access date: 2026-08-18
 - Source type: primary

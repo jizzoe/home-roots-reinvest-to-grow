@@ -5,15 +5,16 @@
 Before any OpenSpec lifecycle work, read these sources in order:
 
 1. `AGENTS.md`.
-2. `docs/sdd-workflow.md`.
-3. `README.md` for the current product and repository boundary.
-4. The relevant accepted specifications under `openspec/specs/`, active change under `openspec/changes/`, and source material under `ai-planning/`.
+2. `docs/product-terminology.md` for approved names and term usage.
+3. `docs/sdd-workflow.md`.
+4. `README.md` for the current product and repository boundary.
+5. The relevant accepted specifications under `openspec/specs/`, active change under `openspec/changes/`, and source material under `ai-planning/`.
 
 Resolve conflicts in favor of the narrower, more recent, explicitly approved project decision. Stop and ask when a material product, ownership, validation, or safety conflict remains.
 
 ## Repository Boundary
 
-This public repository is the central planning, architecture, and cross-repository specification workspace for the Invest in Growth technology initiative supporting Home Roots Foundation's Reinvest-to-Grow methodology. It owns product-wide planning context, research, design briefs, cross-component specifications, and coordination evidence.
+This public repository is the central planning, architecture, and cross-repository specification workspace for Reinvest-to-Grow™ technology supporting Home Roots Foundation's Reinvest-to-Grow™ Methodology. It owns product-wide planning context, research, design briefs, cross-component specifications, and coordination evidence.
 
 It does not own mobile, backend, staff-web, worker, or infrastructure implementation code. It is not authorization to create repositories, accounts, cloud resources, deployments, vendor integrations, or production data systems. Component repositories own their source code, tests, builds, deployment definitions, and repository-local OpenSpec implementation changes.
 

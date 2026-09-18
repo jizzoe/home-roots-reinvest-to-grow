@@ -1,14 +1,16 @@
-# Invest in Growth Technology Planning
+# Reinvest-to-Grow™ Technology Planning
 
-This repository is the central planning, architecture, and cross-repository specification workspace for a technology project supporting **Invest in Growth**, a nonprofit program built around Home Roots Foundation's Reinvest-to-Grow methodology.
+This repository is the central planning, architecture, and cross-repository specification workspace for technology supporting Home Roots Foundation's **Reinvest-to-Grow™**.
 
 The program is intended to help women entrepreneurs in Haiti and other resource-constrained settings retain more business income, reinvest it productively, strengthen their enterprises, and improve economic resilience. Technology is not the intervention. Its role is to help the nonprofit deliver the methodology consistently, measure it responsibly, learn from evidence, and scale what works.
 
 > **Current status:** Planning and feasibility research. No production application, cloud environment, or participant-data system has been implemented from this repository.
 
+See [Product Terminology](docs/product-terminology.md) for the approved names and definitions used across planning, specifications, and component repositories.
+
 ## Nonprofit Vision
 
-Invest in Growth will support women entrepreneurs through a practical enterprise-development model. The model combines margin improvement, appropriate growth capital, coaching, training, productive reinvestment, and evidence-based learning. The Enterprise Supply Hub is expected to be an important operating environment for collective purchasing, inventory access, entrepreneur support, and program learning.
+Reinvest-to-Grow™ will support women entrepreneurs through a practical enterprise-development approach. It combines margin improvement, appropriate growth capital, coaching, training, productive reinvestment, and evidence-based learning. The Enterprise Supply Hub is expected to be an important operating environment for collective purchasing, inventory access, entrepreneur support, and program learning.
 
 The long-term digital goal is an **Enterprise Growth Platform** that helps the nonprofit:
 
@@ -22,7 +24,7 @@ The long-term digital goal is an **Enterprise Growth Platform** that helps the n
 
 ## Program Model
 
-Reinvest-to-Grow is based on a proposed enterprise-development pathway:
+Reinvest-to-Grow™ is based on a proposed enterprise-development pathway:
 
 ```text
 Retain more income
@@ -65,7 +67,7 @@ The current directional technology stack is:
 | --- | --- |
 | Mobile | React Native, Expo, and TypeScript |
 | Offline data | SQLite local projection with a durable synchronization queue |
-| Staff web | React, Vite, TypeScript, and Material UI |
+| HRF Administrative Portal | React, Vite, TypeScript, and Material UI |
 | Backend | Java and Spring Boot modular monolith, initially packaged as one service |
 | Data | PostgreSQL, with S3 for documents |
 | Cloud | AWS, provisioned with Terraform |
@@ -73,7 +75,7 @@ The current directional technology stack is:
 | AI and document processing | Constrained workers for speech, OCR, translation, and structured proposals |
 | Delivery | GitHub Actions and specification-driven, cross-repository changes |
 
-![Systems architecture](ai-planning/architecture/microlending-ngapp-architecture.png)
+![Enterprise Growth Platform architecture](ai-planning/architecture/enterprise-growth-platform-architecture.png)
 
 This architecture can support the full nonprofit vision as a foundation, but not without additional product domains and integrations. Its offline mobile client, role-based staff tools, modular backend, PostgreSQL data model, asynchronous workers, audit history, and security controls fit the operating model. The first version must be organized around the entrepreneur and enterprise rather than bookkeeping and loans.
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This brief is intended to align our understanding of Home Roots Foundation's current Reinvest-to-Grow concept before deeper technical architecture work begins.
+This brief is intended to align our understanding of Home Roots Foundation's current Reinvest-to-Grow™ initiative before deeper technical architecture work begins.
 
 It summarizes:
 
@@ -17,7 +17,7 @@ This is not a final requirements document or implementation plan. It is an align
 
 Home Roots Foundation's concept has expanded beyond a microlending or bookkeeping application.
 
-The current model appears to be an enterprise-development methodology called Reinvest-to-Grow, supported by an eventual Enterprise Growth Platform.
+The current operating practice is the Reinvest-to-Grow™ Methodology, supported by an eventual Enterprise Growth Platform.
 
 At a high level, the methodology is:
 
@@ -33,7 +33,7 @@ The platform is intended to support consistent implementation, measurement, lear
 
 ## Stated In The Home Roots Documents
 
-The Reinvest-to-Grow methodology is not primarily a loan program. Financing is one component within a broader enterprise-development system.
+The Reinvest-to-Grow™ Methodology is not primarily a loan program. Financing is one component within a broader enterprise-development system.
 
 The methodology has three primary intervention mechanisms:
 
@@ -64,7 +64,7 @@ Joe's initial technical architecture focused on a mobile-first bookkeeping and r
 
 The assumed product included:
 
-- A recipient-facing mobile app
+- An Enterprise Growth App
 - Simple bookkeeping workflows
 - Speech input
 - Multilingual interaction
@@ -72,7 +72,7 @@ The assumed product included:
 - Offline support
 - AI assistance for transaction organization and report explanation
 - Loan balance and repayment visibility
-- A nonprofit back-office application
+- An HRF Administrative Portal
 - Loan administration
 - Portfolio reporting
 - Grant and impact metrics
@@ -82,7 +82,7 @@ The proposed architecture was a custom AWS-native platform with:
 
 - React Native and Expo for mobile
 - SQLite for offline local storage
-- React web back office
+- React-based HRF Administrative Portal
 - Java/Spring Boot modular monolith backend
 - PostgreSQL
 - S3 for document storage
@@ -222,7 +222,7 @@ The proposed technical architecture can likely support the broader Enterprise Gr
 The architecture does not need to be discarded. The following choices remain viable:
 
 - Offline-first mobile architecture
-- Web-based staff/admin application
+- HRF Administrative Portal
 - Modular monolith backend
 - PostgreSQL shared data layer
 - Async worker architecture for OCR, AI, document processing, and reporting tasks
@@ -261,7 +261,7 @@ Even if the main platform is custom-built, some components should probably use e
 - Full accounting suite functionality
 - Sophisticated loan servicing core, if a configurable system can meet the actual lending requirements
 
-Custom development should focus on the parts that are unique to the Reinvest-to-Grow methodology:
+Custom development should focus on the parts that are unique to the Reinvest-to-Grow™ Methodology:
 
 - Entrepreneur journey
 - Supply Hub workflows
@@ -310,4 +310,3 @@ After confirmation, the next artifact should be a revised technical blueprint th
 - Integration boundaries
 - Reporting and validation data requirements
 - Build-vs-buy decision points
-

@@ -6,7 +6,7 @@ Your architecture is not wrong. It is pointed at the wrong gravitational center.
 
 You designed:
 
-`recipient bookkeeping + microloan back office + impact reporting`
+`entrepreneur bookkeeping + HRF Administrative Portal + impact reporting`
 
 His current model needs:
 
@@ -18,7 +18,7 @@ The good news: the technical choices you made are mostly compatible with that bi
 Your core architecture choices are still sound:
 
 - `React Native + SQLite offline sync` fits his offline-first/mobile-first requirement.
-- `React web back office` fits staff, program manager, finance, and leadership workflows.
+- `React-based HRF Administrative Portal` fits staff, program manager, finance, and leadership workflows.
 - `Spring Boot modular monolith` is a good starting shape for an evolving methodology. I would still prefer it over microservices early.
 - `PostgreSQL` is appropriate for connected enterprise histories, traceable metrics, lending records, assessments, purchases, and audit trails.
 - `S3 + OCR workers + async queues` still makes sense for documents, receipts, assessment evidence, and operational artifacts.
@@ -151,11 +151,11 @@ Even in a ground-up build, I would avoid custom-building commodity infrastructur
 - Full accounting package features
 - A sophisticated loan core unless the lending model is too custom for existing systems
 
-Custom effort should concentrate on the unique methodology: entrepreneur journey, Supply Hub integration, coaching, EGS, reinvestment tracking, longitudinal outcomes, and learning loops.
+Custom effort should concentrate on the unique Reinvest-to-Grow™ Methodology: entrepreneur journey, Supply Hub integration, coaching, EGS, reinvestment tracking, longitudinal outcomes, and learning loops.
 
 **Bottom Line**
 Your technical architecture is feasible as a foundation, but your product architecture needs to pivot.
 
-The build should no longer be framed as a **mobile bookkeeping/microlending platform**. It should be framed as an **offline-capable enterprise growth operating system**, where bookkeeping, loans, speech, OCR, and AI are supporting capabilities.
+The build should be framed as an **offline-capable enterprise growth operating system**, where bookkeeping, financing, speech, OCR, and AI are supporting capabilities.
 
 My judgment: keep the architectural backbone, rewrite the domain model and MVP around his current methodology. The bones are good. The skeleton just needs to be rearranged before anyone starts pouring concrete.
