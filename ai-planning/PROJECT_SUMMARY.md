@@ -2,7 +2,7 @@
 
 ## Project Goal
 
-Build a mobile-first enterprise growth platform that helps Home Roots Foundation deliver its Reinvest-to-Grow™ model to entrepreneurs in resource-constrained settings.
+Build a mobile-first enterprise growth platform that helps Home Roots Foundation deliver Reinvest-to-Grow™ to entrepreneurs in resource-constrained settings.
 
 The project has two connected goals:
 

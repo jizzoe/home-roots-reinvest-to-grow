@@ -1,6 +1,6 @@
-# Reinvest-to-Grow™ Model Technology Planning
+# Reinvest-to-Grow™ Technology Planning
 
-This repository is the central planning, architecture, and cross-repository specification workspace for technology supporting Home Roots Foundation's **Reinvest-to-Grow™ model**.
+This repository is the central planning, architecture, and cross-repository specification workspace for technology supporting Home Roots Foundation's **Reinvest-to-Grow™**.
 
 The program is intended to help women entrepreneurs in Haiti and other resource-constrained settings retain more business income, reinvest it productively, strengthen their enterprises, and improve economic resilience. Technology is not the intervention. Its role is to help the nonprofit deliver the methodology consistently, measure it responsibly, learn from evidence, and scale what works.
 
@@ -8,7 +8,7 @@ The program is intended to help women entrepreneurs in Haiti and other resource-
 
 ## Nonprofit Vision
 
-The Reinvest-to-Grow™ model will support women entrepreneurs through a practical enterprise-development approach. It combines margin improvement, appropriate growth capital, coaching, training, productive reinvestment, and evidence-based learning. The Enterprise Supply Hub is expected to be an important operating environment for collective purchasing, inventory access, entrepreneur support, and program learning.
+Reinvest-to-Grow™ will support women entrepreneurs through a practical enterprise-development approach. It combines margin improvement, appropriate growth capital, coaching, training, productive reinvestment, and evidence-based learning. The Enterprise Supply Hub is expected to be an important operating environment for collective purchasing, inventory access, entrepreneur support, and program learning.
 
 The long-term digital goal is an **Enterprise Growth Platform** that helps the nonprofit:
 
@@ -22,7 +22,7 @@ The long-term digital goal is an **Enterprise Growth Platform** that helps the n
 
 ## Program Model
 
-The Reinvest-to-Grow™ model is based on a proposed enterprise-development pathway:
+Reinvest-to-Grow™ is based on a proposed enterprise-development pathway:
 
 ```text
 Retain more income
